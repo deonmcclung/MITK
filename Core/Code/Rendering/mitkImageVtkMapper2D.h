@@ -117,6 +117,9 @@ class MITK_CORE_EXPORT ImageVtkMapper2D : public VtkMapper
 {
 
 public:
+
+  static void SetReslicingFlag(bool on);
+
   /** Standard class typedefs. */
   mitkClassMacro( ImageVtkMapper2D,VtkMapper );
 
@@ -297,6 +300,8 @@ protected:
     * If the distances have different sign, there is an intersection.
     **/
   bool RenderingGeometryIntersectsImage( const Geometry2D* renderingGeometry, SlicedGeometry3D* imageGeometry );
+
+  static bool s_ReslicingFlag;
 };
 
 } // namespace mitk
