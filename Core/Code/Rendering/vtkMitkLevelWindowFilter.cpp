@@ -35,7 +35,7 @@ vtkStandardNewMacro(vtkMitkLevelWindowFilter);
 
 vtkMitkLevelWindowFilter::vtkMitkLevelWindowFilter():m_MinOpacity(0.0),m_MaxOpacity(255.0)
 {
-  //MITK_INFO << "mitk level/window filter uses " << GetNumberOfThreads() << " thread(s)";
+  MITK_DEBUG << "mitk level/window filter uses " << GetNumberOfThreads() << " thread(s)";
 }
 
 vtkMitkLevelWindowFilter::~vtkMitkLevelWindowFilter()
